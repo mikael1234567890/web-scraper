@@ -1,0 +1,19 @@
+name: Book Scraper
+
+on:
+    workflow_dispatch:
+
+jobs:
+    scrape:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-python@v4
+              with:
+                
+                python-version: '3.11'
+
+
+            - run: pip install src/scraper.py
