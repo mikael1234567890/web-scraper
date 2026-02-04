@@ -16,4 +16,4 @@ jobs:
                 python-version: '3.11'
 
 
-            - run: pip install src/scraper.py
+            - run: python src/scraper.py
