@@ -1,4 +1,5 @@
 import requests
+from notifier import notify_discord
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from storage import load_books, save_books
@@ -55,6 +56,9 @@ if __name__ == "__main__":
     old_books = load_books()
 
     added = find_new_books(old_books, new_books)
+
+    if added:
+        notify_discord(added)
 
     if added:
         print(f"{len(added)} new books found:")
