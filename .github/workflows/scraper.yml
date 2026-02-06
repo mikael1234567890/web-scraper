@@ -32,6 +32,4 @@ jobs:
                 git add books.json
                 git commit -m "update books.json"
                 git push
-            
-            
               continue-on-error: true
