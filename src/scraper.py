@@ -51,7 +51,7 @@ def get_books(max_books=None):
     return books
 
 if __name__ == "__main__":
-    new_books = get_books(max_books=50)
+    new_books = get_books(max_books=60)
 
     old_books = load_books()
 
